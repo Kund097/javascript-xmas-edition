@@ -22,10 +22,10 @@
 
 <section>
     <img src="img/gift_top.svg" class="gift_top" alt="Imagen de un regalo">
-    <form method="post" name="formulario" id="carta-a-santa">
+    <form method="post" name="form" id="carta-a-santa">
         <p>Querido Santa,</p>
-        <p>Mi nombre es<input type="text" name="nombre" id="nombre" value="Facundo"> y vivo en
-            <select name="ciudad">
+        <p>Mi nombre es<input type="text" name="name" id="nombre" value="Facundo"> y vivo en
+            <select name="city">
 				<option value="">Selecciona...</option>
                 <option value="Buenos Aires">Bs. As.</option>
                 <option value="Catamarca">Catamarca</option>
@@ -54,25 +54,25 @@
         </p>
 
         <p> Creo que este año he sido
-            <input type="radio" value="muy_bueno" name="comportamiento"> Muy bueno
-            <input type="radio" value="bueno" name="comportamiento"> Bueno
-            <input type="radio" value="maso" name="comportamiento" checked> Mas o menos.</p>
+            <input type="radio" value="muy_bueno" name="behavior"> Muy bueno
+            <input type="radio" value="bueno" name="behavior"> Bueno
+            <input type="radio" value="maso" name="behavior" checked> Mas o menos.</p>
         <p>Este año realmente me gustaría recibir</p>
         <p>
-            <textarea name="descripcion-regalo" rows="4" cols="45"></textarea>
+            <textarea name="gift-description" rows="4" cols="45"></textarea>
         </p>
 
-        <ul id="errores">
+        <ul id="errors">
         </ul>
 
         <p>
-            <button name="submit" id="enviar-carta">
+            <button name="submit" id="send-letter">
                 Enviar carta
             </button>
         </p>
     </form>
 
-    <div id="exito" class="oculto">
+    <div id="success" class="hidden">
         <strong>Tu envío fue exitoso!</strong>
     </div>
 
@@ -107,6 +107,7 @@
 
 <script src="tarea/tarea-clase-7.js"></script>
 <script src="js/pruebas.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
