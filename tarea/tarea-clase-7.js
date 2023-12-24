@@ -8,31 +8,31 @@
 
 function validateName(name) {
     if (name.length === 0) {
-        return "Este campo debe tener al menos 1 caracter";
+        return "El campo nombre debe tener al menos 1 caracter";
     }
 
     if (name.length >= 50) {
-        return "Este campo debe tener menos de 50 caracteres";
+        return "El campo nombre debe tener menos de 50 caracteres";
+    }
+
+    if (!/^[a-z]+$/i.test(name)) {
+        return "El campo nombre solo debe tener letras";
     }
 
     return "";
 }
 
 function validateCity(city) {
-    if (city.length === 0) {
-        return "Este campo no debe estar vacio";
+    if (!/^[a-z ]+$/i.test(city)) {
+        return "El campo ciudad no debe estar vacio";
     }
 
     return "";
 }
 
 function validateGiftDescription(giftDescription) {
-    if (giftDescription.length >= 250) {
-        return "La descripción del regalo no debe tener más de 250 caracteres";
+    if (!/^[a-z ,\.()0-9\-ñ]{2,250}$/i.test(giftDescription)) {
+        return "El campo descripción del regalo debe tener entre 2 y 250 caracteres"; 
     }
-    if (giftDescription.length <= 2) {
-        return "Este campo debe tener al menos 2 caracteres";
-    }
-
     return "";
 }
